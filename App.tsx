@@ -7,7 +7,10 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <LinearGradient colors={['#08244F', '#134CB5', '#0B42AB']} style={styles.container}>
+      <LinearGradient
+        colors={['#08244F', '#134CB5', '#0B42AB']}
+        style={styles.container}
+      >
         <Header />
       </LinearGradient>
     </>
@@ -18,6 +21,6 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     paddingTop: 70,
-    paddingHorizontal: 30.
+    paddingHorizontal: 30,
   },
 });
