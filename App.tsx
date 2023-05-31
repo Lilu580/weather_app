@@ -7,6 +7,7 @@ import { WeatherIcon } from './src/components/WeatherIcon';
 import { ShowInfo } from './src/components/showInfo';
 import { ShortInfo } from './src/components/ShortInfo';
 import { InfoCard } from './src/components/InfoCard';
+import { WeekForecast } from './src/components/WeekForecast';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <ShowInfo />
         <ShortInfo />
         <InfoCard />
+        <WeekForecast/>
       </LinearGradient>
     </ScrollView>
   );
