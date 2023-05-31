@@ -6,10 +6,11 @@ import { useFonts } from 'expo-font';
 import { WeatherIcon } from './src/components/WeatherIcon';
 import { ShowInfo } from './src/components/showInfo';
 import { ShortInfo } from './src/components/ShortInfo';
+import { InfoCard } from './src/components/InfoCard';
 
 export default function App() {
   return (
-    <>
+    <ScrollView>
       <StatusBar style="auto" />
       <LinearGradient
         colors={['#08244F', '#134CB5', '#0B42AB']}
@@ -19,8 +20,9 @@ export default function App() {
         <WeatherIcon />
         <ShowInfo />
         <ShortInfo />
+        <InfoCard />
       </LinearGradient>
-    </>
+    </ScrollView>
   );
 }
 
