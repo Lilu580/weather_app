@@ -3,6 +3,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header } from './src/components/Header';
 import { useFonts } from 'expo-font';
+import { WeatherIcon } from './src/components/WeatherIcon';
+import { ShowInfo } from './src/components/showInfo';
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
         style={styles.container}
       >
         <Header />
+        <WeatherIcon />
+        <ShowInfo />
       </LinearGradient>
     </>
   );
