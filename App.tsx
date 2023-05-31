@@ -1,10 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Header } from './src/components/Header';
 import { useFonts } from 'expo-font';
 import { WeatherIcon } from './src/components/WeatherIcon';
 import { ShowInfo } from './src/components/showInfo';
+import { ShortInfo } from './src/components/ShortInfo';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Header />
         <WeatherIcon />
         <ShowInfo />
+        <ShortInfo />
       </LinearGradient>
     </>
   );
