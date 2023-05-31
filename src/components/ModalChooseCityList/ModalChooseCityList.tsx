@@ -1,13 +1,18 @@
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import { styles } from './styles';
 import { ModalChooseCityItem } from '../ModalChooseCityItem';
+import { useAppSelector } from '../../app/hooks';
 
 export const ModalChooseCityList = () => {
+  const { SelectedCities } = useAppSelector(state => state.cities);
+
   return ( 
     <View style={styles.container}>
-      <ModalChooseCityItem/>
-      <ModalChooseCityItem/>
-      <ModalChooseCityItem/>
+      <FlatList
+        style={styles.flatList}
+        data={SelectedCities}
+        renderItem={({item}) => <ModalChooseCityItem cityName={item}/>}
+      />
     </View>
   );
 };

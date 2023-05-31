@@ -31,5 +31,10 @@ export const styles = StyleSheet.create({
   },
   notificationContainer: {
     position: 'relative'
+  },
+  touch: {
+    top: 5,
+    width: 20,
+    height: 20,
   }
 });
