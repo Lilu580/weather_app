@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import { styles } from './styles';
 import { InfoHourCard } from '../infoHourCard';
+import { ListOfHourCards } from '../ListOfHourCards';
 
 export const InfoCard = () => {
   return (
@@ -13,7 +14,7 @@ export const InfoCard = () => {
           Mar, 9
         </Text>
       </View>
-      <InfoHourCard />
+      <ListOfHourCards />
     </View>
   )
 }
