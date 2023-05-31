@@ -21,7 +21,6 @@ export default function App() {
         <ShowInfo />
         <ShortInfo />
         <InfoCard />
-        <InfoCard />
       </LinearGradient>
     </ScrollView>
   );
