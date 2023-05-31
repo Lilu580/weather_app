@@ -8,6 +8,7 @@ import { ShowInfo } from './src/components/showInfo';
 import { ShortInfo } from './src/components/ShortInfo';
 import { InfoCard } from './src/components/InfoCard';
 import { WeekForecast } from './src/components/WeekForecast';
+import { ModalChooseCity } from './src/components/ModalChoseCity';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         colors={['#08244F', '#134CB5', '#0B42AB']}
         style={styles.container}
       >
+        <ModalChooseCity />
         <Header />
         <WeatherIcon />
         <ShowInfo />
@@ -30,6 +32,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    position: 'relative',
     height: '100%',
     paddingVertical: 70,
     paddingHorizontal: 30,
