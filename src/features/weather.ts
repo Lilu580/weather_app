@@ -13,7 +13,7 @@ export const init = createAsyncThunk(
     try {
       const weatherFromServer = await getWeather(selectedCity);
       return weatherFromServer;
-    } catch(error: any) {
+    } catch (error: any) {
       return Promise.reject(error.message);
     }
   }

@@ -2,26 +2,19 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import {
   StyleSheet,
-  View,
-  TouchableWithoutFeedback,
   ScrollView,
 } from 'react-native';
 import { Header } from './components/Header';
-import { useFonts } from 'expo-font';
 import { WeatherIcon } from './components/WeatherIcon';
 import { ShowInfo } from './components/showInfo';
 import { ShortInfo } from './components/ShortInfo';
 import { InfoCard } from './components/InfoCard';
 import { WeekForecast } from './components/WeekForecast';
 import { ModalChooseCity } from './components/ModalChoseCity';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
 import { useAppDispatch, useAppSelector } from './app/hooks';
-import { setOpen } from './features/cities';
-import { getWeather } from './api';
 import { useEffect } from 'react';
-import { setWeather } from './features/weather';
 import * as weatherActions from './features/weather';
+import { CustomCalendar } from './components/Calendar/Calendar';
 
 export default function MainPage() {
   const { SelectedCity } = useAppSelector((state) => state.cities);
@@ -45,6 +38,7 @@ export default function MainPage() {
         <ShortInfo />
         <InfoCard />
         <WeekForecast />
+        <CustomCalendar></CustomCalendar>
       </LinearGradient>
     </ScrollView>
   );
