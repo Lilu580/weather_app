@@ -16,8 +16,8 @@ export const styles = StyleSheet.create({
   },
   city: {
     fontSize: 18,
-    fontWeight: "600",
-    color: '#FFF'
+    fontWeight: '600',
+    color: '#FFF',
   },
   notificationRing: {
     width: 8,
@@ -30,6 +30,11 @@ export const styles = StyleSheet.create({
     right: 0,
   },
   notificationContainer: {
-    position: 'relative'
-  }
+    position: 'relative',
+  },
+  touch: {
+    top: 5,
+    width: 20,
+    height: 20,
+  },
 });

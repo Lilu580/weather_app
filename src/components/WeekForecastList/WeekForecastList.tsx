@@ -3,7 +3,7 @@ import { styles } from './styles';
 import { WeekForecastItem } from '../WeekForecastItem';
 
 export const WeekForecastList = () => {
-  return ( 
+  return (
     <View style={styles.container}>
       <WeekForecastItem />
       <WeekForecastItem />

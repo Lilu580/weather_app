@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,6 +19,6 @@ export const styles = StyleSheet.create({
     borderColor: '#5096FF',
     borderWidth: 2,
     borderRadius: 20,
-    backgroundColor: '#2566A3'
-  }
-})
+    backgroundColor: '#2566A3',
+  },
+});

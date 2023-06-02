@@ -2,11 +2,14 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#104084',
+    width: '100%',
+    paddingVertical: 15,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
-    gap: 20,
+    gap: 10,
+  },
+  flatList: {
+    width: '100%',
   },
 });

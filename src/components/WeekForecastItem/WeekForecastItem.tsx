@@ -3,10 +3,10 @@ import { styles } from './styles';
 import WeatherIcon from '../../../assets/images/iconWeather.svg';
 
 export const WeekForecastItem = () => {
-  return ( 
+  return (
     <View style={styles.container}>
       <Text style={styles.text}>Monday</Text>
-      <WeatherIcon width={40} height={40}/>
+      <WeatherIcon width={40} height={40} />
       <View style={styles.temperaturesContainer}>
         <View style={[styles.temperaturesContainer, styles.day]}>
           <Text style={styles.text}>13</Text>
