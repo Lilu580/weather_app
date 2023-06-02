@@ -4,15 +4,18 @@ import { InfoCard } from '../InfoCard';
 import { InfoHourCard } from '../infoHourCard';
 
 export const ListOfHourCards = () => {
+  const hours = [];
+
+  for (let i = 0; i < 24; i++) {
+    hours.push(i);
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
-        <InfoHourCard isActive={false} />
-        <InfoHourCard isActive={true} />
-        <InfoHourCard isActive={false} />
-        <InfoHourCard isActive={false} />
-        <InfoHourCard isActive={false} />
-        <InfoHourCard isActive={false} />
+        {hours.map(hour => (
+          <InfoHourCard hour={hour} />
+        ))}
       </View>
     </ScrollView>
   );

@@ -13,8 +13,8 @@ export const init = createAsyncThunk(
     try {
       const weatherFromServer = await getWeather(selectedCity);
       return weatherFromServer;
-    } catch {
-      rejectWithValue('This city is not Aviable')
+    } catch(error: any) {
+      return Promise.reject(error.message);
     }
   }
 );
@@ -43,10 +43,13 @@ const citiesSlice = createSlice({
     builder.addCase(init.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(init.fulfilled, (state, action: PayloadAction<WeatherData>) => {
-      state.weather = action.payload;
-      state.loading = false;
-    });
+    builder.addCase(
+      init.fulfilled,
+      (state, action: PayloadAction<WeatherData>) => {
+        state.weather = action.payload;
+        state.loading = false;
+      }
+    );
     builder.addCase(init.rejected, (state, action) => {
       state.loading = false;
       state.error = action.error.message;
@@ -54,7 +57,7 @@ const citiesSlice = createSlice({
     builder.addMatcher(isRejectedWithValue, (state, action) => {
       switch (action.payload as string) {
         case 'This city is not Aviable':
-          state.error = 'This city is not available';
+          state.error = action.payload as string;
           break;
         default:
           state.error = 'An error occurred';
