@@ -1,10 +1,10 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   text: {
     paddingLeft: 25,
@@ -15,11 +15,11 @@ export const styles = StyleSheet.create({
   infoContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   textInfo: {
     lineHeight: 22,
     color: '#fff',
-    alignSelf: 'center'
-  }
-})
+    alignSelf: 'center',
+  },
+});

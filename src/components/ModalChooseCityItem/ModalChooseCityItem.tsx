@@ -5,25 +5,25 @@ import { removeCity, setSelectedCity } from '../../features/cities';
 import { useCallback } from 'react';
 
 type Props = {
-  cityName: string,
-}
+  cityName: string;
+};
 
 export const ModalChooseCityItem = ({ cityName }: Props) => {
-  const dispath = useAppDispatch()
+  const dispath = useAppDispatch();
 
   const handleOnChooseCity = useCallback(() => {
-    dispath(setSelectedCity(cityName))
-  },[])
+    dispath(setSelectedCity(cityName));
+  }, []);
 
   const handleOnRemoveCCity = useCallback(() => {
-    dispath(removeCity(cityName))
-  },[])
+    dispath(removeCity(cityName));
+  }, []);
 
-  return ( 
+  return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <Button title={cityName} onPress={handleOnChooseCity}></Button>
-        <Button title='r' onPress={handleOnRemoveCCity}></Button>
+        <Button title="r" onPress={handleOnRemoveCCity}></Button>
       </View>
     </View>
   );

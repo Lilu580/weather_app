@@ -1,1 +1,1 @@
-export * from './WeekForecastItem'
+export * from './WeekForecastItem';

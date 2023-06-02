@@ -5,18 +5,18 @@ import Mild from '../../../assets/images/mild.svg';
 import Wind from '../../../assets/images/windy.svg';
 
 export const ShortInfo = () => {
-  return ( 
+  return (
     <View style={styles.container}>
       <View style={styles.infoContainer}>
-        <Drops width={30} height={30}/>
+        <Drops width={30} height={30} />
         <Text style={styles.infoText}> 6% </Text>
       </View>
       <View style={styles.infoContainer}>
-        <Mild width={30} height={30}/>
+        <Mild width={30} height={30} />
         <Text style={styles.infoText}> 49% </Text>
       </View>
       <View style={styles.infoContainer}>
-        <Wind width={30} height={30}/>
+        <Wind width={30} height={30} />
         <Text style={styles.infoText}> 19km/h </Text>
       </View>
     </View>

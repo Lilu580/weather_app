@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -20,6 +20,6 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     fontWeight: '500',
-    alignSelf: 'flex-start'
-  }
-})
+    alignSelf: 'flex-start',
+  },
+});

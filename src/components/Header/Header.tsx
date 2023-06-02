@@ -7,13 +7,12 @@ import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { setOpen } from '../../features/cities';
 
 export const Header = () => {
-  const dispatch = useAppDispatch()
-  const { SelectedCity } = useAppSelector(state => state.cities);
+  const dispatch = useAppDispatch();
+  const { SelectedCity } = useAppSelector((state) => state.cities);
 
   const handleOpenModal = () => {
     dispatch(setOpen(true));
-  }
-
+  };
 
   return (
     <View style={styles.container}>
@@ -21,7 +20,7 @@ export const Header = () => {
         <Location width={24} height={20} />
         <Text style={styles.city}>{SelectedCity}</Text>
         <TouchableOpacity onPress={handleOpenModal} style={styles.touch}>
-          <Vector width={10} height={10}/>
+          <Vector width={10} height={10} />
         </TouchableOpacity>
       </View>
       <View style={styles.notificationContainer}>

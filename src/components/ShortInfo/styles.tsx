@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -13,15 +13,15 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#104084',
   },
-  infoContainer:{
+  infoContainer: {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
-    gap: 5
+    gap: 5,
   },
   infoText: {
     fontSize: 14,
     color: '#fff',
     fontWeight: '700',
-  }
-})
+  },
+});

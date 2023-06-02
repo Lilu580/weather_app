@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   cardHeader: {
     width: '100%',
-    display:'flex',
+    display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -27,5 +27,5 @@ export const styles = StyleSheet.create({
   },
   headerTextTitle: {
     fontWeight: '700',
-  }
-})
+  },
+});

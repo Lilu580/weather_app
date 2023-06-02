@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 10,
   },
-  flatList:{
-    width: '100%'
-  }
-})
+  flatList: {
+    width: '100%',
+  },
+});

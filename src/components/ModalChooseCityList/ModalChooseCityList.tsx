@@ -4,14 +4,14 @@ import { ModalChooseCityItem } from '../ModalChooseCityItem';
 import { useAppSelector } from '../../app/hooks';
 
 export const ModalChooseCityList = () => {
-  const { SelectedCities } = useAppSelector(state => state.cities);
+  const { SelectedCities } = useAppSelector((state) => state.cities);
 
-  return ( 
+  return (
     <View style={styles.container}>
       <FlatList
         style={styles.flatList}
         data={SelectedCities}
-        renderItem={({item}) => <ModalChooseCityItem cityName={item}/>}
+        renderItem={({ item }) => <ModalChooseCityItem cityName={item} />}
       />
     </View>
   );

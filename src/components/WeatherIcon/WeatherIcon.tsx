@@ -7,5 +7,5 @@ export const WeatherIcon = () => {
     <View style={styles.container}>
       <WeahterImage width={140} height={140} />
     </View>
-  )
-}
+  );
+};

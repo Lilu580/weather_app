@@ -17,7 +17,7 @@ import MainPage from './src/mainPage';
 export default function App() {
   return (
     <Provider store={store}>
-      <MainPage/>
+      <MainPage />
     </Provider>
   );
 }
