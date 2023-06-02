@@ -13,20 +13,29 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { setOpen } from './features/cities';
+import { getWeather } from './api';
+import { useEffect } from 'react';
+import { setWeather } from './features/weather';
+import * as weatherActions from './features/weather'
 
 export default function MainPage() {
-  const { isOpenModal } = useAppSelector(state => state.cities)
+  const { SelectedCity } = useAppSelector(state => state.cities)
   const dispatch = useAppDispatch();
 
-  const handleCloseModals = () => {
-    dispatch(setOpen(false));
-  }
+  useEffect(() => {
+    // const getWeatherFromServer = async () => {
+    //   const weatherFromServer = await getWeather(SelectedCity)
+    //   dispatch(setWeather(weatherFromServer));
+    // };
 
-  console.log(isOpenModal)
+    // getWeatherFromServer();
+
+    dispatch(weatherActions.init(SelectedCity));
+  }, [SelectedCity]);
+
+
   return (
     <ScrollView>
-      <TouchableWithoutFeedback onPress={handleCloseModals}>
-        <View>
           <StatusBar style="auto" />
           <LinearGradient
             colors={['#08244F', '#134CB5', '#0B42AB']}
@@ -40,8 +49,6 @@ export default function MainPage() {
             <InfoCard />
             <WeekForecast/>
           </LinearGradient>
-        </View>
-        </TouchableWithoutFeedback>
       </ScrollView>
   )
 }

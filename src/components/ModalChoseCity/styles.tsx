@@ -27,4 +27,9 @@ export const styles = StyleSheet.create({
     borderColor: '#5096FF',
     padding: 10,
   },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 })

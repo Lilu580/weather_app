@@ -10,6 +10,12 @@ export const styles = StyleSheet.create({
     borderBottomColor: '#5096FF',
     borderBottomWidth: 1,
   },
+  contentContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   text: {
     color: '#fff',
     fontSize: 18,
