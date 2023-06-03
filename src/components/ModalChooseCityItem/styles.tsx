@@ -2,19 +2,16 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    position: 'relative',
     paddingVertical: 5,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
     borderBottomColor: '#5096FF',
     borderBottomWidth: 1,
   },
   contentContainer: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
   text: {
     color: '#fff',

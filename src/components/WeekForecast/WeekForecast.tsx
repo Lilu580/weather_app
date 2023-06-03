@@ -11,7 +11,7 @@ export const WeekForecast = () => {
 
   const handlePress = () => {
     dispatch(setOpen(true));
-  }
+  };
   return (
     <View style={styles.container}>
       <View style={styles.header}>

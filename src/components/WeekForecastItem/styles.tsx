@@ -51,5 +51,5 @@ export const styles = StyleSheet.create({
   },
   weatherIcon: {
     marginRight: 20,
-  }
+  },
 });

@@ -4,12 +4,12 @@ import { SelectedDate } from '../types/currentWeather';
 type Week = {
   selectedWeek: SelectedDate[] | [];
   isOpenModal: boolean;
-}
+};
 
 const initialState: Week = {
   selectedWeek: [],
   isOpenModal: false,
-}
+};
 
 const weeksSlice = createSlice({
   name: 'week',

@@ -7,8 +7,7 @@ import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { setOpen, setSelectedWeek } from '../../features/calendar';
 
 export const CustomCalendar = () => {
-
-  const { selectedWeek, isOpenModal } = useAppSelector(state => state.weeks)
+  const { selectedWeek, isOpenModal } = useAppSelector((state) => state.weeks);
   const dispatch = useAppDispatch();
 
   const handleCloseModals = () => {
@@ -21,24 +20,27 @@ export const CustomCalendar = () => {
     endOfWeek.setDate(endOfWeek.getDate() + 6);
     const weekDates = [];
     let currentDate = new Date(startOfWeek);
-  
+
     while (currentDate <= endOfWeek) {
       const formattedDate = currentDate.toISOString().split('T')[0];
-      const weekDay = currentDate.toLocaleString('en-US', { weekday: 'long' }).split(',')[0];
+      const weekDay = currentDate
+        .toLocaleString('en-US', { weekday: 'long' })
+        .split(',')[0];
       const date = {
         currDate: currentDate.toISOString(), // Зміна типу на рядок
         day: formattedDate,
         weekDay,
-      }
-  
+      };
+
       weekDates.push(date);
       currentDate.setDate(currentDate.getDate() + 1);
     }
-  
-    dispatch(setSelectedWeek(weekDates))
+
+    dispatch(setSelectedWeek(weekDates));
   };
 
-  const markedDates: { [key: string]: { selected: boolean; marked: boolean } } = {};
+  const markedDates: { [key: string]: { selected: boolean; marked: boolean } } =
+    {};
 
   for (const date of selectedWeek) {
     const dateString = new Date(date.currDate).toISOString().split('T')[0]; // Перетворення назад у тип Date
@@ -50,16 +52,16 @@ export const CustomCalendar = () => {
     <Modal visible={isOpenModal} transparent animationType="slide">
       <TouchableWithoutFeedback onPress={handleCloseModals}>
         <View style={styles.modalOverlay}>
-        <TouchableWithoutFeedback>
-          <View style={styles.container}>
-            <Calendar 
-              onDayLongPress={handleWeekSelect}
-              onDayPress={handleWeekSelect}
-              markedDates={markedDates}
-              markingType="period"
-            />
-          </View>
-        </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback>
+            <View style={styles.container}>
+              <Calendar
+                onDayLongPress={handleWeekSelect}
+                onDayPress={handleWeekSelect}
+                markedDates={markedDates}
+                markingType="period"
+              />
+            </View>
+          </TouchableWithoutFeedback>
         </View>
       </TouchableWithoutFeedback>
     </Modal>

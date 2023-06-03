@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button ,TouchableOpacity} from 'react-native';
 import { styles } from './styles';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { removeCity, setSelectedCity } from '../../features/cities';
@@ -15,15 +15,19 @@ export const ModalChooseCityItem = ({ cityName }: Props) => {
     dispath(setSelectedCity(cityName));
   }, []);
 
-  const handleOnRemoveCCity = useCallback(() => {
+  const handleOnRemoveCity = useCallback(() => {
     dispath(removeCity(cityName));
   }, []);
 
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
-        <Button title={cityName} onPress={handleOnChooseCity}></Button>
-        <Button title="r" onPress={handleOnRemoveCCity}></Button>
+        <TouchableOpacity onPress={handleOnChooseCity}>
+          <Text style={styles.text}>{cityName}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleOnRemoveCity}>
+          <Text style={styles.text}>x</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
