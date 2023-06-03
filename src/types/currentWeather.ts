@@ -130,7 +130,7 @@ export interface WeatherData {
 }
 
 export interface SelectedDate {
-  currDate: string,
-  day: string,
-  weekDay: string,
+  currDate: string;
+  day: string;
+  weekDay: string;
 }

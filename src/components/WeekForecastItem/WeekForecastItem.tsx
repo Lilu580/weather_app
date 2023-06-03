@@ -3,9 +3,9 @@ import { styles } from './styles';
 import WeatherIcon from '../../../assets/images/iconWeather.svg';
 
 type Props = {
-  weekDay: string,
-  day: string,
-}
+  weekDay: string;
+  day: string;
+};
 
 export const WeekForecastItem: React.FC<Props> = ({ weekDay, day }) => {
   const formattedDate = new Date().toISOString().split('T')[0];
@@ -19,8 +19,8 @@ export const WeekForecastItem: React.FC<Props> = ({ weekDay, day }) => {
   return (
     <View style={style}>
       <Text style={styles.text}>{weekDay}</Text>
-        <View style={styles.imageAndInfoContainer}>
-        <WeatherIcon width={40} height={40} style={styles.weatherIcon}/>
+      <View style={styles.imageAndInfoContainer}>
+        <WeatherIcon width={40} height={40} style={styles.weatherIcon} />
         <View style={styles.temperaturesContainer}>
           <View style={[styles.temperaturesContainer, styles.day]}>
             <Text style={styles.text}>13</Text>

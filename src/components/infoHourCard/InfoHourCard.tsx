@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { styles } from './styles';
 import WeatherICon from '../../../assets/images/iconWeather.svg';
 import { useAppSelector } from '../../app/hooks';
@@ -24,6 +24,9 @@ export const InfoHourCard = ({ hour }: Props) => {
   if (localTime.getHours() === hour) {
     containerStyles.push(styles.isActive);
   }
+  const icon = weather?.forecast.forecastday[0].hour[hour].condition.icon;
+
+  console.log(weather);
 
   return (
     <>
@@ -32,7 +35,9 @@ export const InfoHourCard = ({ hour }: Props) => {
           <>
             <Text style={styles.text}>{currentHourWeather.temp_c}°C</Text>
 
-            <WeatherICon height={30} width={30} />
+            {icon && (
+              <Image source={{ uri: `https:${icon}` }} style={{width: 50, height: 50}} />
+            )}
 
             <Text style={styles.text}>{currentTime}</Text>
           </>
