@@ -1,9 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
-import {
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { Header } from './components/Header';
 import { WeatherIcon } from './components/WeatherIcon';
 import { ShowInfo } from './components/showInfo';

@@ -17,7 +17,6 @@ export const ShortInfo = () => {
           <View style={styles.infoContainer}>
             <Drops width={30} height={30} />
             <Text style={styles.infoText}>
-              {' '}
               {weather.forecast.forecastday[0].day.daily_chance_of_rain}{' '}
             </Text>
           </View>
