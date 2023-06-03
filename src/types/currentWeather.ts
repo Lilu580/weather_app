@@ -128,3 +128,9 @@ export interface WeatherData {
   current: CurrentWeather;
   forecast: Forecast;
 }
+
+export interface SelectedDate {
+  currDate: string,
+  day: string,
+  weekDay: string,
+}

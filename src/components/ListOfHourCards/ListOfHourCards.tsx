@@ -13,7 +13,7 @@ export const ListOfHourCards = () => {
   return (
     <ScrollView>
       <View style={styles.container}>
-        {hours.map(hour => (
+        {hours.map((hour) => (
           <InfoHourCard hour={hour} />
         ))}
       </View>

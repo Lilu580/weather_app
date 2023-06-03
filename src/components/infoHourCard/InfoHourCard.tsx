@@ -8,17 +8,16 @@ type Props = {
 };
 export const InfoHourCard = ({ hour }: Props) => {
   const containerStyles = [];
-  const { weather, loading, error } = useAppSelector(state => state.weather);
+  const { weather, loading, error } = useAppSelector((state) => state.weather);
   const currentHourWeather = weather?.forecast.forecastday[0].hour[hour];
   const isAviable = currentHourWeather && !loading && !error;
-  let currentTime = `0${hour}:00`
+  let currentTime = `0${hour}:00`;
 
-  if(currentTime.length > 5) {
+  if (currentTime.length > 5) {
     currentTime = currentTime.slice(1);
   }
 
   const localTime = new Date();
-  
 
   containerStyles.push(styles.container);
 
@@ -34,7 +33,7 @@ export const InfoHourCard = ({ hour }: Props) => {
             <Text style={styles.text}>{currentHourWeather.temp_c}°C</Text>
 
             <WeatherICon height={30} width={30} />
-            
+
             <Text style={styles.text}>{currentTime}</Text>
           </>
         )}

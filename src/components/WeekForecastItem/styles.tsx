@@ -36,4 +36,20 @@ export const styles = StyleSheet.create({
   celsius: {
     fontSize: 12,
   },
+  isActive: {
+    paddingHorizontal: 10,
+    width: 330,
+    borderColor: '#5096FF',
+    borderWidth: 2,
+    borderRadius: 20,
+    backgroundColor: '#2566A3',
+  },
+  imageAndInfoContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  weatherIcon: {
+    marginRight: 20,
+  }
 });
