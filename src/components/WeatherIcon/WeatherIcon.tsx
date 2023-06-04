@@ -10,7 +10,10 @@ export const WeatherIcon = () => {
   return (
     <View style={styles.container}>
       {icon && (
-        <Image source={{ uri: `https:${icon}` }} style={{width: 120, height: 120}} />
+        <Image
+          source={{ uri: `https:${icon}` }}
+          style={{ width: 120, height: 120 }}
+        />
       )}
     </View>
   );

@@ -1,21 +1,28 @@
 import { View, TouchableWithoutFeedback, TextInput, Modal } from 'react-native';
+import { useEffect } from 'react';
 import { styles } from './styles';
 import { ModalChooseCityList } from '../ModalChooseCityList';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { setCity, setOpen } from '../../features/cities';
 import { useState } from 'react';
+import * as citiesActions from '../../features/cities';
+import { ModalChooseCityFromServerList } from '../ModalChooseCityFromServerList';
 
-export const ModalChooseCity = () => {
-  const { isOpenModal } = useAppSelector((state) => state.cities);
-  const dispatch = useAppDispatch();
+export const ModalChooseCity: React.FC = () => {
+  const { isOpenModal, citiesFromServer, isLoadingCitiesFromServer, isErrorCitiesFromServer } = useAppSelector((state) => state.cities);
   const [query, setQuery] = useState('');
+
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(citiesActions.initCities(query));
+  }, [query]);
 
   const handleCloseModals = () => {
     dispatch(setOpen(false));
   };
 
-  const handleFindCity = () => {
-    dispatch(setCity(query));
+  const ClearQuery = () => {
     setQuery('');
   };
 
@@ -31,9 +38,8 @@ export const ModalChooseCity = () => {
                 style={styles.input}
                 placeholder="choose city..."
                 keyboardType="default"
-                onSubmitEditing={handleFindCity}
               />
-              <ModalChooseCityList />
+                <ModalChooseCityList query={query} ClearQuery={ClearQuery}/>
             </View>
           </TouchableWithoutFeedback>
         </View>
