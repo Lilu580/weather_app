@@ -134,3 +134,23 @@ export interface SelectedDate {
   day: string;
   weekDay: string;
 }
+
+export interface CityFromServer {
+  id: number,
+  name: string,
+  region: string,
+  country: string,
+  lat: number,
+  lon: number,
+  url: string,
+}
+
+export interface SelectedCity {
+    id: number,
+    name: string,
+    region: string,
+    country: string,
+    lat: number,
+    lon: number,
+    url: string,
+}

@@ -1,29 +1,34 @@
-import { View, Text, TextInput, Button ,TouchableOpacity} from 'react-native';
+import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { removeCity, setSelectedCity } from '../../features/cities';
 import { useCallback } from 'react';
+import { setCity } from '../../features/cities';
+import { SelectedCity } from '../../types/currentWeather';
 
 type Props = {
-  cityName: string;
+  SelectedCity: SelectedCity,
+  ClearQuery: () => void;
 };
 
-export const ModalChooseCityItem = ({ cityName }: Props) => {
+export const ModalChooseCityItem = ({ SelectedCity , ClearQuery }: Props) => {
   const dispath = useAppDispatch();
 
   const handleOnChooseCity = useCallback(() => {
-    dispath(setSelectedCity(cityName));
+      dispath(setSelectedCity(SelectedCity));
+      ClearQuery();
+      dispath(setCity(SelectedCity));
   }, []);
 
   const handleOnRemoveCity = useCallback(() => {
-    dispath(removeCity(cityName));
+    dispath(removeCity(SelectedCity));
   }, []);
 
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <TouchableOpacity onPress={handleOnChooseCity}>
-          <Text style={styles.text}>{cityName}</Text>
+          <Text style={styles.text}>{`${SelectedCity.name}(${SelectedCity.country})`}</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleOnRemoveCity}>
           <Text style={styles.text}>x</Text>

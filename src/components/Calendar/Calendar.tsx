@@ -46,7 +46,6 @@ export const CustomCalendar = () => {
     const dateString = new Date(date.currDate).toISOString().split('T')[0]; // Перетворення назад у тип Date
     markedDates[dateString] = { selected: true, marked: true };
   }
-  console.log(selectedWeek);
 
   return (
     <Modal visible={isOpenModal} transparent animationType="slide">

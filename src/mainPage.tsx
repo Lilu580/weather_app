@@ -18,7 +18,7 @@ export default function MainPage() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(weatherActions.init(SelectedCity));
+    dispatch(weatherActions.init(SelectedCity.url));
   }, [SelectedCity]);
 
   return (

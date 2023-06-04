@@ -26,8 +26,6 @@ export const InfoHourCard = ({ hour }: Props) => {
   }
   const icon = weather?.forecast.forecastday[0].hour[hour].condition.icon;
 
-  console.log(weather);
-
   return (
     <>
       <View style={containerStyles}>
@@ -36,7 +34,10 @@ export const InfoHourCard = ({ hour }: Props) => {
             <Text style={styles.text}>{currentHourWeather.temp_c}°C</Text>
 
             {icon && (
-              <Image source={{ uri: `https:${icon}` }} style={{width: 50, height: 50}} />
+              <Image
+                source={{ uri: `https:${icon}` }}
+                style={{ width: 50, height: 50 }}
+              />
             )}
 
             <Text style={styles.text}>{currentTime}</Text>
