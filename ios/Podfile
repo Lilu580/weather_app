@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'YourProjectName' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for YourProjectName
+  pod 'React', :path => '../node_modules/react-native'
+  pod 'ReactNativeNavigation', :path => '../node_modules/react-native-navigation'
+
+  # Add additional pods for your dependencies here
+end

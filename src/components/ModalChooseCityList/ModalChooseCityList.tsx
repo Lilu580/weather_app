@@ -1,8 +1,7 @@
-import { View, Text, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 import { styles } from './styles';
 import { ModalChooseCityItem } from '../ModalChooseCityItem';
 import { useAppSelector } from '../../app/hooks';
-import { Dispatch } from '@reduxjs/toolkit';
 
 type Props = {
   query: string;
@@ -16,8 +15,6 @@ export const ModalChooseCityList: React.FC<Props> = ({ query, ClearQuery }) => {
     isLoadingCitiesFromServer,
     isErrorCitiesFromServer,
   } = useAppSelector((state) => state.cities);
-
-  console.log(citiesFromServer);
 
   const isAviableCitiesFromServer =
     !isLoadingCitiesFromServer &&

@@ -18,7 +18,6 @@ export const WeekForecastList = () => {
 
   return (
     <>
-      {!selectedWeek && <Text></Text>}
       <View style={styles.container}>
         {selectedWeek.map(({ weekDay, day }) => (
           <WeekForecastItem weekDay={weekDay} day={day} key={day} />

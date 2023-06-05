@@ -1,6 +1,5 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import { styles } from './styles';
-import { InfoCard } from '../InfoCard';
 import { InfoHourCard } from '../infoHourCard';
 
 export const ListOfHourCards = () => {

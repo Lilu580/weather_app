@@ -1,20 +1,15 @@
 import { View, TouchableWithoutFeedback, TextInput, Modal } from 'react-native';
+import { useCallback } from 'react';
 import { useEffect } from 'react';
 import { styles } from './styles';
 import { ModalChooseCityList } from '../ModalChooseCityList';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { setCity, setOpen } from '../../features/cities';
+import { setOpen } from '../../features/cities';
 import { useState } from 'react';
 import * as citiesActions from '../../features/cities';
-import { ModalChooseCityFromServerList } from '../ModalChooseCityFromServerList';
 
 export const ModalChooseCity: React.FC = () => {
-  const {
-    isOpenModal,
-    citiesFromServer,
-    isLoadingCitiesFromServer,
-    isErrorCitiesFromServer,
-  } = useAppSelector((state) => state.cities);
+  const { isOpenModal } = useAppSelector((state) => state.cities);
   const [query, setQuery] = useState('');
 
   const dispatch = useAppDispatch();
@@ -23,13 +18,13 @@ export const ModalChooseCity: React.FC = () => {
     dispatch(citiesActions.initCities(query));
   }, [query]);
 
-  const handleCloseModals = () => {
+  const handleCloseModals = useCallback(() => {
     dispatch(setOpen(false));
-  };
+  }, [])
 
-  const ClearQuery = () => {
+  const ClearQuery = useCallback(() => {
     setQuery('');
-  };
+  }, []) 
 
   return (
     <Modal visible={isOpenModal} transparent animationType="slide">

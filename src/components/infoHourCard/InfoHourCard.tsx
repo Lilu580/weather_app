@@ -1,11 +1,11 @@
 import { View, Text, Image } from 'react-native';
 import { styles } from './styles';
-import WeatherICon from '../../../assets/images/iconWeather.svg';
 import { useAppSelector } from '../../app/hooks';
 
 type Props = {
   hour: number;
 };
+
 export const InfoHourCard = ({ hour }: Props) => {
   const containerStyles = [];
   const { weather, loading, error } = useAppSelector((state) => state.weather);
@@ -24,26 +24,25 @@ export const InfoHourCard = ({ hour }: Props) => {
   if (localTime.getHours() === hour) {
     containerStyles.push(styles.isActive);
   }
+
   const icon = weather?.forecast.forecastday[0].hour[hour].condition.icon;
 
   return (
-    <>
-      <View style={containerStyles}>
-        {isAviable && (
-          <>
-            <Text style={styles.text}>{currentHourWeather.temp_c}°C</Text>
+    <View style={containerStyles}>
+      {isAviable && (
+        <>
+          <Text style={styles.text}>{currentHourWeather.temp_c}°C</Text>
 
-            {icon && (
-              <Image
-                source={{ uri: `https:${icon}` }}
-                style={{ width: 50, height: 50 }}
-              />
-            )}
+          {icon && (
+            <Image
+              source={{ uri: `https:${icon}` }}
+              style={{ width: 50, height: 50 }}
+            />
+          )}
 
-            <Text style={styles.text}>{currentTime}</Text>
-          </>
-        )}
-      </View>
-    </>
+          <Text style={styles.text}>{currentTime}</Text>
+        </>
+      )}
+    </View>
   );
 };
