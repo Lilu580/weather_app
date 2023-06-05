@@ -8,7 +8,7 @@ import { setOpen } from '../../features/cities';
 
 export const Header = () => {
   const dispatch = useAppDispatch();
-  const { weather } = useAppSelector(state => state.weather);
+  const { weather } = useAppSelector((state) => state.weather);
 
   const handleOpenModal = () => {
     dispatch(setOpen(true));

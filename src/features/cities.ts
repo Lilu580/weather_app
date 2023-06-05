@@ -1,6 +1,12 @@
-import { PayloadAction, createAsyncThunk, createSlice, isRejectedWithValue } from '@reduxjs/toolkit';
+import {
+  PayloadAction,
+  createAsyncThunk,
+  createSlice,
+  isRejectedWithValue,
+} from '@reduxjs/toolkit';
 import { getCities, getWeather } from '../api';
 import { CityFromServer, SelectedCity } from '../types/currentWeather';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const initCities = createAsyncThunk(
   'city/fetch',
@@ -15,26 +21,26 @@ export const initCities = createAsyncThunk(
 );
 
 type CitiesState = {
-  query: string,
-  SelectedCity: SelectedCity,
-  SelectedCities: SelectedCity[],
-  isOpenModal: boolean,
-  citiesFromServer: CityFromServer[],
-  isLoadingCitiesFromServer: boolean,
-  isErrorCitiesFromServer: string | undefined,
-}
+  query: string;
+  SelectedCity: SelectedCity;
+  SelectedCities: SelectedCity[];
+  isOpenModal: boolean;
+  citiesFromServer: CityFromServer[];
+  isLoadingCitiesFromServer: boolean;
+  isErrorCitiesFromServer: string | undefined;
+};
 
 const Warsaw = {
   id: 1988803,
-  name: "Warsaw",
-  region: "",
-  country: "Poland",
+  name: 'Warsaw',
+  region: '',
+  country: 'Poland',
   lat: 52.25,
   lon: 21.0,
-  url: "warsaw-poland"
-}
+  url: 'warsaw-poland',
+};
 
-const initialState : CitiesState = {
+const initialState: CitiesState = {
   query: '',
   SelectedCity: Warsaw,
   SelectedCities: [Warsaw],
@@ -42,7 +48,7 @@ const initialState : CitiesState = {
   citiesFromServer: [],
   isLoadingCitiesFromServer: false,
   isErrorCitiesFromServer: '',
-}
+};
 
 const citiesSlice = createSlice({
   name: 'cities',
@@ -89,7 +95,7 @@ const citiesSlice = createSlice({
           state.isErrorCitiesFromServer = 'An error occurred';
       }
     });
-  }
+  },
 });
 
 export const { setCity, setSelectedCity, setOpen, removeCity } =

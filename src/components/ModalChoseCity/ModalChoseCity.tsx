@@ -9,10 +9,15 @@ import * as citiesActions from '../../features/cities';
 import { ModalChooseCityFromServerList } from '../ModalChooseCityFromServerList';
 
 export const ModalChooseCity: React.FC = () => {
-  const { isOpenModal, citiesFromServer, isLoadingCitiesFromServer, isErrorCitiesFromServer } = useAppSelector((state) => state.cities);
+  const {
+    isOpenModal,
+    citiesFromServer,
+    isLoadingCitiesFromServer,
+    isErrorCitiesFromServer,
+  } = useAppSelector((state) => state.cities);
   const [query, setQuery] = useState('');
 
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(citiesActions.initCities(query));
@@ -39,7 +44,7 @@ export const ModalChooseCity: React.FC = () => {
                 placeholder="choose city..."
                 keyboardType="default"
               />
-                <ModalChooseCityList query={query} ClearQuery={ClearQuery}/>
+              <ModalChooseCityList query={query} ClearQuery={ClearQuery} />
             </View>
           </TouchableWithoutFeedback>
         </View>

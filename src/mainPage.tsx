@@ -24,18 +24,26 @@ export default function MainPage() {
   return (
     <ScrollView>
       <StatusBar style="auto" />
+
       <LinearGradient
         colors={['#08244F', '#134CB5', '#0B42AB']}
         style={styles.container}
       >
         <ModalChooseCity />
+
         <Header />
+
         <WeatherIcon />
+
         <ShowInfo />
+
         <ShortInfo />
+
         <InfoCard />
+
         <WeekForecast />
-        <CustomCalendar></CustomCalendar>
+        
+        <CustomCalendar /> 
       </LinearGradient>
     </ScrollView>
   );
