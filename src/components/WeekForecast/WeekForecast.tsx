@@ -15,7 +15,7 @@ export const WeekForecast = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Next Forecast</Text>
-  
+
         <TouchableOpacity onPress={handlePress}>
           <CalendarSvg width={30} height={30} />
         </TouchableOpacity>

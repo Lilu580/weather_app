@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     fontSize: 12,
   },
   imageAndHeader: {
-    width:'50%',
+    width: '50%',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',

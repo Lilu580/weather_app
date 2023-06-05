@@ -4,7 +4,7 @@ import {
   createSlice,
   isRejectedWithValue,
 } from '@reduxjs/toolkit';
-import { WeatherData } from '../types/currentWeather';
+import { WeatherData } from '../types/WeatherData';
 import { getWeather } from '../api';
 
 export const init = createAsyncThunk(

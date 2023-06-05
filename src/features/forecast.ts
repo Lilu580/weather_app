@@ -4,19 +4,22 @@ import {
   createSlice,
   isRejectedWithValue,
 } from '@reduxjs/toolkit';
-import { WeatherData } from '../types/currentWeather';
+import { WeatherData } from '../types/WeatherData';
 import { getHistoryWeather, getFutureWeather } from '../api';
 
 type Props = {
-  selectedCity: string,
-  selectedDay: string,
-}
+  selectedCity: string;
+  selectedDay: string;
+};
 
 export const getHistoryFromServer = createAsyncThunk(
   'forecastHistory/fetch',
-  async ({selectedCity, selectedDay}: Props, { rejectWithValue }) => {
+  async ({ selectedCity, selectedDay }: Props, { rejectWithValue }) => {
     try {
-      const forecastFromServer = await getHistoryWeather(selectedCity, selectedDay);
+      const forecastFromServer = await getHistoryWeather(
+        selectedCity,
+        selectedDay
+      );
       return forecastFromServer;
     } catch (error: any) {
       return Promise.reject(error.message);
@@ -26,9 +29,12 @@ export const getHistoryFromServer = createAsyncThunk(
 
 export const getFutureFromServer = createAsyncThunk(
   'forecastFuture/fetch',
-  async ({selectedCity, selectedDay}: Props, { rejectWithValue }) => {
+  async ({ selectedCity, selectedDay }: Props, { rejectWithValue }) => {
     try {
-      const forecastFromServer = await getFutureWeather(selectedCity, selectedDay);
+      const forecastFromServer = await getFutureWeather(
+        selectedCity,
+        selectedDay
+      );
       return forecastFromServer;
     } catch (error: any) {
       return Promise.reject(error.message);
@@ -40,7 +46,7 @@ type WeatherState = {
   history: WeatherData[] | [];
   loadingHistroty: boolean;
   isErrorHistory: string | undefined;
-  future: WeatherData[]| [];
+  future: WeatherData[] | [];
   loadingFuture: boolean;
   isErrorFuture: string | undefined;
 };
@@ -61,7 +67,7 @@ const forecastSlice = createSlice({
     clearForecast(state) {
       state.future = [];
       state.history = [];
-    }
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getHistoryFromServer.pending, (state) => {

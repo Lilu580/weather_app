@@ -5,7 +5,7 @@ import { useAppSelector } from '../../app/hooks';
 export const ShowInfo = () => {
   const { weather, loading, error } = useAppSelector((state) => state.weather);
   const isWeatherAviable = weather && !loading && !error;
-  
+
   return (
     <View style={styles.container}>
       {isWeatherAviable && (

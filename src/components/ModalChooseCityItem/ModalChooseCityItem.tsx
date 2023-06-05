@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { removeCity, setSelectedCity } from '../../features/cities';
 import { useCallback } from 'react';
 import { setCity } from '../../features/cities';
-import { SelectedCity } from '../../types/currentWeather';
+import { SelectedCity } from '../../types/SelectedCity';
 
 type Props = {
   SelectedCity: SelectedCity;

@@ -6,8 +6,8 @@ import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import * as forecastActions from '../../features/forecast';
 
 export const WeekForecastList = () => {
-  const { selectedWeek } = useAppSelector(state => state.weeks);
-  const { SelectedCity } = useAppSelector(state => state.cities);
+  const { selectedWeek } = useAppSelector((state) => state.weeks);
+  const { SelectedCity } = useAppSelector((state) => state.cities);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -18,12 +18,10 @@ export const WeekForecastList = () => {
 
   return (
     <>
-      {!selectedWeek && (
-        <Text></Text>
-      )}
+      {!selectedWeek && <Text></Text>}
       <View style={styles.container}>
-        {selectedWeek.map(({weekDay, day}) => (
-          <WeekForecastItem weekDay={weekDay} day={day} key={day}/>
+        {selectedWeek.map(({ weekDay, day }) => (
+          <WeekForecastItem weekDay={weekDay} day={day} key={day} />
         ))}
       </View>
     </>

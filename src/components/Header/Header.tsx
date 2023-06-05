@@ -18,14 +18,18 @@ export const Header = () => {
     <View style={styles.container}>
       <View style={styles.locationContainer}>
         <Location width={24} height={20} />
+
         <Text style={styles.city}>{weather?.location.name}</Text>
+
         <TouchableOpacity onPress={handleOpenModal} style={styles.touch}>
           <Vector width={10} height={10} />
         </TouchableOpacity>
       </View>
+
       <View style={styles.notificationContainer}>
         <Notification width={24} height={24} />
-        <View style={styles.notificationRing}></View>
+
+        <View style={styles.notificationRing} />
       </View>
     </View>
   );

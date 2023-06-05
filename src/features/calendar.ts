@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { SelectedDate } from '../types/currentWeather';
+import { SelectedDate } from '../types/SelectedDate';
 
 type Week = {
   selectedWeek: SelectedDate[] | [];

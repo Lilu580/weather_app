@@ -38,7 +38,8 @@ export const CustomCalendar = () => {
     dispatch(setSelectedWeek(weekDates));
   }, []);
 
-  const markedDates: {[key: string]: { selected: boolean; marked: boolean }} = {};
+  const markedDates: { [key: string]: { selected: boolean; marked: boolean } } =
+    {};
 
   for (const date of selectedWeek) {
     const dateString = new Date(date.currDate).toISOString().split('T')[0];
