@@ -7,17 +7,17 @@ import { setCity } from '../../features/cities';
 import { SelectedCity } from '../../types/currentWeather';
 
 type Props = {
-  SelectedCity: SelectedCity,
+  SelectedCity: SelectedCity;
   ClearQuery: () => void;
 };
 
-export const ModalChooseCityItem = ({ SelectedCity , ClearQuery }: Props) => {
+export const ModalChooseCityItem = ({ SelectedCity, ClearQuery }: Props) => {
   const dispath = useAppDispatch();
 
   const handleOnChooseCity = useCallback(() => {
-      dispath(setSelectedCity(SelectedCity));
-      ClearQuery();
-      dispath(setCity(SelectedCity));
+    dispath(setSelectedCity(SelectedCity));
+    ClearQuery();
+    dispath(setCity(SelectedCity));
   }, []);
 
   const handleOnRemoveCity = useCallback(() => {
@@ -28,7 +28,9 @@ export const ModalChooseCityItem = ({ SelectedCity , ClearQuery }: Props) => {
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <TouchableOpacity onPress={handleOnChooseCity}>
-          <Text style={styles.text}>{`${SelectedCity.name}(${SelectedCity.country})`}</Text>
+          <Text
+            style={styles.text}
+          >{`${SelectedCity.name}(${SelectedCity.country})`}</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleOnRemoveCity}>
           <Text style={styles.text}>x</Text>

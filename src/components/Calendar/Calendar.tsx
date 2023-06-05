@@ -1,8 +1,7 @@
 import { Calendar, DateData } from 'react-native-calendars';
+import { useCallback } from 'react';
 import { View, TouchableWithoutFeedback, Modal } from 'react-native';
 import { styles } from './styles';
-import { useEffect, useState } from 'react';
-import { SelectedDate } from '../../types/currentWeather';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { setOpen, setSelectedWeek } from '../../features/calendar';
 
@@ -14,7 +13,7 @@ export const CustomCalendar = () => {
     dispatch(setOpen(false));
   };
 
-  const handleWeekSelect = (date: DateData) => {
+  const handleWeekSelect = useCallback((date: DateData) => {
     const startOfWeek = date.dateString;
     const endOfWeek = new Date(date.timestamp);
     endOfWeek.setDate(endOfWeek.getDate() + 6);
@@ -37,13 +36,12 @@ export const CustomCalendar = () => {
     }
 
     dispatch(setSelectedWeek(weekDates));
-  };
+  }, []);
 
-  const markedDates: { [key: string]: { selected: boolean; marked: boolean } } =
-    {};
+  const markedDates: {[key: string]: { selected: boolean; marked: boolean }} = {};
 
   for (const date of selectedWeek) {
-    const dateString = new Date(date.currDate).toISOString().split('T')[0]; // Перетворення назад у тип Date
+    const dateString = new Date(date.currDate).toISOString().split('T')[0];
     markedDates[dateString] = { selected: true, marked: true };
   }
 

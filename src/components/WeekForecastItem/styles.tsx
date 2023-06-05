@@ -36,6 +36,13 @@ export const styles = StyleSheet.create({
   celsius: {
     fontSize: 12,
   },
+  imageAndHeader: {
+    width:'50%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
   isActive: {
     paddingHorizontal: 10,
     width: 330,
@@ -44,10 +51,13 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: '#2566A3',
   },
-  imageAndInfoContainer: {
+  infoContainer: {
+    width: '50%',
+    paddingLeft: 40,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
   weatherIcon: {
     marginRight: 20,
