@@ -5,7 +5,8 @@ import {
   isRejectedWithValue,
 } from '@reduxjs/toolkit';
 import { getCities, getWeather } from '../api';
-import { CityFromServer, SelectedCity } from '../types/currentWeather';
+import { CityFromServer } from '../types/CityFromServer';
+import { SelectedCity } from '../types/SelectedCity';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const initCities = createAsyncThunk(

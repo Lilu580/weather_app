@@ -42,8 +42,8 @@ export default function MainPage() {
         <InfoCard />
 
         <WeekForecast />
-        
-        <CustomCalendar /> 
+
+        <CustomCalendar />
       </LinearGradient>
     </ScrollView>
   );
