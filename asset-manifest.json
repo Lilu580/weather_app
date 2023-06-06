@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/weather_app/static/js/main.b798c32e.js",
+    "static/js/638.e35985c5.js": "/weather_app/static/js/638.e35985c5.js",
+    "favicon.ico": "/weather_app/favicon.ico",
+    "index.html": "/weather_app/index.html",
+    "static/media/Location.svg": "/weather_app/static/media/Location.78c163f6de39a6dd851d.svg",
+    "favicon-32.png": "/weather_app/favicon-32.png",
+    "static/media/calendar.svg": "/weather_app/static/media/calendar.35180bc4b0310bad2bd2.svg",
+    "static/media/drops.svg": "/weather_app/static/media/drops.7deea6d0a2232f5a1d72.svg",
+    "favicon-16.png": "/weather_app/favicon-16.png",
+    "manifest.json": "/weather_app/manifest.json",
+    "serve.json": "/weather_app/serve.json",
+    "main.b798c32e.js.map": "/weather_app/static/js/main.b798c32e.js.map",
+    "638.e35985c5.js.map": "/weather_app/static/js/638.e35985c5.js.map"
+  },
+  "entrypoints": [
+    "static/js/638.e35985c5.js",
+    "static/js/main.b798c32e.js"
+  ]
+}
