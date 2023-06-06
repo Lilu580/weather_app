@@ -16,7 +16,7 @@ export const initCities = createAsyncThunk(
       const citiesFromServer = await getCities(query);
       return citiesFromServer;
     } catch (error: any) {
-      return Promise.reject(error.message);
+      return rejectWithValue('This city is not aviable');
     }
   }
 );
@@ -89,7 +89,7 @@ const citiesSlice = createSlice({
     });
     builder.addMatcher(isRejectedWithValue, (state, action) => {
       switch (action.payload as string) {
-        case 'This city is not Aviable':
+        case 'This city is not aviable':
           state.isErrorCitiesFromServer = action.payload as string;
           break;
         default:
