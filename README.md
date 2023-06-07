@@ -17,4 +17,4 @@ This weaher was created using weather api and expo go.
   *scan Qr using your device camera
   *you can see demo of my app
 # Overwiew
-<iframe width="560" height="315" src="https://www.youtube.com/embed/834027502" frameborder="0" allowfullscreen></iframe>
+- https://vimeo.com/834027502?share=copy
