@@ -22,9 +22,9 @@ This weaher was created using weather api and expo go.
 # Overwiew
 - Video [Link](https://vimeo.com/834027502?share=copy)
 - ScrennShots
- * [main](https://prnt.sc/6lkMScoYHEaX)
- *[Choose City](https://prnt.sc/PoJAjL3s6_iU)
- * [Calendar](https://prnt.sc/veRfuaz1zrBJ)
+  * [main](https://prnt.sc/6lkMScoYHEaX)
+  * [Choose City](https://prnt.sc/PoJAjL3s6_iU)
+  * [Calendar](https://prnt.sc/veRfuaz1zrBJ)
 # Author
 - [Linkedin](https://www.linkedin.com/in/bogdan-maliuta-217048274/)
 - [Telegram](https://t.me/lilu580)
