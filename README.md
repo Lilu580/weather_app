@@ -6,9 +6,9 @@ This weaher was created using weather api and expo go.
 - Redux-toolkit
 # Usage
 - You can run this app using expo go (only for Android)
-  *install expo go on your device
-  *scan Qr or Enter link in your expo go from here https://expo.dev/@lilu580/weather?serviceType=classic&distribution=expo-go
-  *you can see demo of my app
+  * install expo go on your device
+  * scan Qr or Enter link in your expo go from here https://expo.dev/@lilu580/weather?serviceType=classic&distribution=expo-go
+  * you can see demo of my app
 - For iphone users you need to clone my project local
   1.clone my repo on your pc
   2.in terminal run **npm i**
