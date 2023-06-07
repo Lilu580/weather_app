@@ -2,11 +2,12 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import CalendarSvg from '../../../assets/images/calendar.svg';
 import { WeekForecastList } from '../WeekForecastList';
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { setOpen } from '../../features/calendar';
 
 export const WeekForecast = () => {
   const dispatch = useAppDispatch();
+  const { selectedWeek } = useAppSelector((state) => state.weeks);
 
   const handlePress = () => {
     dispatch(setOpen(true));
@@ -21,6 +22,9 @@ export const WeekForecast = () => {
         </TouchableOpacity>
       </View>
       <WeekForecastList />
+      {!selectedWeek && (
+        <Text style={styles.text}>Choose week...</Text>
+      )}
     </View>
   );
 };

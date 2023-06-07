@@ -1,4 +1,4 @@
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, FlatList } from 'react-native';
 import { styles } from './styles';
 import { InfoHourCard } from '../infoHourCard';
 
@@ -10,12 +10,12 @@ export const ListOfHourCards = () => {
   }
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        {hours.map((hour) => (
-          <InfoHourCard hour={hour} key={hour} />
-        ))}
-      </View>
-    </ScrollView>
+    <FlatList
+      data={hours}
+      keyExtractor={(item) => item.toString()}
+      horizontal={true}
+      renderItem={({ item }) => <InfoHourCard hour={item} />}
+      contentContainerStyle={styles.container}
+    />
   );
 };

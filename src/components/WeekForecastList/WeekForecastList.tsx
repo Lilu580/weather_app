@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { useEffect } from 'react';
 import { styles } from './styles';
 import { WeekForecastItem } from '../WeekForecastItem';
@@ -14,7 +14,7 @@ export const WeekForecastList = () => {
     {
       dispatch(forecastActions.clearForecast());
     }
-  }, [selectedWeek]);
+  }, []);
 
   return (
     <>

@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    width: 310,
+    width: 300,
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
   },
   isActive: {
     paddingHorizontal: 10,
-    width: 330,
+    width: 320,
     borderColor: '#5096FF',
     borderWidth: 2,
     borderRadius: 20,
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
   },
   infoContainer: {
     width: '50%',
-    paddingLeft: 40,
+    paddingLeft: 30,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',

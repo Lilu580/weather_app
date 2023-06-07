@@ -24,4 +24,8 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
   },
+  text: {
+    color: '#fff',
+    fontSize: 14,
+  }
 });
