@@ -4,6 +4,9 @@ This weaher was created using weather api and expo go.
 # Technologies
 - React-native
 - Redux-toolkit
+- TypeScript
+- Redux Thunk
+- Es-lint, Prettier, Husky, Lint-staged
 # Usage
 - You can run this app using expo go (only for Android)
   * install expo go on your device
@@ -18,3 +21,11 @@ This weaher was created using weather api and expo go.
   * you can see demo of my app
 # Overwiew
 - Video [Link](https://vimeo.com/834027502?share=copy)
+- ScrennShots
+ * [main](https://prnt.sc/6lkMScoYHEaX)
+ * [Choose City](https://prnt.sc/PoJAjL3s6_iU)
+ * [Calendar](https://prnt.sc/veRfuaz1zrBJ)
+# Author
+- [Linkedin](https://www.linkedin.com/in/bogdan-maliuta-217048274/)
+- [Telegram](https://t.me/lilu580)
+- [Email](bogdanmaliutawork@gmail.com)
