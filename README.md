@@ -1,4 +1,4 @@
-# weather_app
+# Weather App
 This app shows my skills in react-native and redux toolkit.Here you can choose city where you want to got weather, you also able to chose week forecast and see weather by hours.
 This weaher was created using weather api and expo go.
 # Technologies
@@ -17,4 +17,4 @@ This weaher was created using weather api and expo go.
   * scan Qr using your device camera
   * you can see demo of my app
 # Overwiew
-- https://vimeo.com/834027502?share=copy
+- Video [Link](https://vimeo.com/834027502?share=copy)
